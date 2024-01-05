@@ -1,0 +1,85 @@
+---
+const date = new Date().toLocaleDateString('ro', {
+    month: 'long',
+    year: 'numeric'
+});
+---
+
+<section class="program_section">
+    <h2>Programul bisericii, 6 {date} </h2>
+    <div class="program_section-grid">
+        <div class="program_section-element">
+            <h4>Vineri Seara (19.00)</h4>
+            <p>Predica - Pastor Daniel Nitulescu </p>
+        </div>
+        <div class="program_section-element">
+            <h4>Sabat dimineata (9.00)</h4>
+            <p>Predica - Pastor Daniel Nitulescu </p>
+        </div>
+        <div class="program_section-element">
+            <h4>Lectiune (9.30)</h4>
+            <p>Pe grupe</p>
+        </div>
+        <div class="program_section-element">
+            <h4>Sabat Pranz (11.00)</h4>
+            <p>Predica - Pastor Daniel Nitulescu </p>
+        </div>
+        <div class="program_section-element">
+            <h4>Sambata Seara (16.00)</h4>
+            <p>Predica - Pastor Daniel Nitulescu </p>
+        </div>                                
+    </div>
+</section>
+
+<style>
+    .program_section{
+        padding: 2rem .5rem;
+    }
+
+    .program_section h2{
+        font-size: 2rem;
+        color: var(--color-primary-700);
+        text-transform: lowercase;
+        font-style: italic;
+        padding-bottom: 1rem;
+    }
+
+    .program_section-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 768px) {
+        .program_section-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    }
+
+    @media (min-width: 1400px) {
+        .program_section-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    }
+
+    .program_section-element{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        border-top: 2px solid var(--color-primary-700);
+        margin: .5rem .7rem;
+        padding-top: .3rem;
+    }
+
+    .program_section-element h4{
+        font-size: 1.35rem;
+        text-align: center;
+    }
+
+    .program_section-element p{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+</style>

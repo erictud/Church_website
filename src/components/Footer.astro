@@ -1,0 +1,28 @@
+---
+import NavList from "./NavList.astro";
+
+---
+
+<footer>
+    <img src="/logo.webp" alt="Logo ul BAZS"/>
+    <div>
+        <NavList currentPage={false}/>
+    </div>
+</footer>
+
+<style>
+    footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: var(--color-primary-300);
+        padding: 0 1rem;
+    }
+
+    footer img{
+        widows: 3rem;
+        height: 6rem;
+    }
+</style>

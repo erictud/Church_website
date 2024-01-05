@@ -1,8 +1,90 @@
 ---
 import GeneralLayout from '../layouts/GeneralLayout.astro';
+import HeroSection from '../components/landing-page/HeroSection.astro';
+import ContactSection from '../components/landing-page/ContactSection.astro';
+import Program from '../components/landing-page/Program.astro';
 import '../styles/global.css';
 ---
 
-<GeneralLayout title="Acasă">
-    <img src="" alt="">
+
+<GeneralLayout title="Acasă" navAbsolute={true}>
+    <HeroSection />
+    <section class="about-section">
+        <h2>Despre noi</h2>
+        <div class="about-section__container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fuga suscipit necessitatibus! Est eius ipsa harum, animi odit ad ut! Perspiciatis distinctio debitis libero officiis impedit dolorem molestias magnam quibusdam odit repellat sunt dolor vel quod tempore ratione voluptatem porro consequatur harum ullam quidem, excepturi voluptate quae! Voluptatibus dolore ab voluptates alias ratione eius reiciendis, qui sunt quam laborum consectetur exercitationem incidunt eveniet tempora sit distinctio dignissimos doloremque quae adipisci iusto numquam tenetur illo quod delectus? Sed itaque culpa aperiam sunt ipsam impedit pariatur eum nemo dolore tenetur. Culpa incidunt cumque veniam, repellat suscipit repudiandae voluptate voluptatum facilis expedita deleniti?
+                <a href="/">Citeste mai multe &rarr;</a>
+            </p>
+            <di class="about-section__image-container">
+                <img src="/default_image.jpg" alt="image" />
+                <img src="/default_image.jpg" alt="image" />
+            </di>
+        </div>
+    </section>
+    <ContactSection />
+    <Program />
 </GeneralLayout>
+
+<style>
+    .about-section{
+        margin: 2rem .5rem;
+    }
+
+    .about-section h2{
+        font-size: 2rem;
+        color: var(--color-primary-800);
+    }
+
+    .about-section div{
+        padding: 0 1rem;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .about-section__container p a{
+        margin-left: 1rem;
+        color: var(--color-primary-700);
+    }
+    
+    .about-section__image-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+    .about-section__image-container img{
+        width: 10rem;
+    }
+
+    @media (min-width: 430px) {
+        .about-section__image-container img{
+            width: 15rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
+    .about-section div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+     } 
+
+     .about-section__image-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about-section__image-container img{
+        width: 45rem;
+    }
+    }
+</style>
+

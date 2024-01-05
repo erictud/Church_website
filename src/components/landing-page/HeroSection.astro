@@ -1,0 +1,163 @@
+<div class="hero-section">
+        <video autoplay muted loop id="cover-video">
+            <source src="/cover_video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-section__content">
+            <h1>Biserica Adventistă de Ziua a Șaptea Marantha Bucuresti</h1>
+            <h2>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 21">
+                <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M8 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                  <path d="M13.8 12.938h-.01a7 7 0 1 0-11.465.144h-.016l.141.17c.1.128.2.252.3.372L8 20l5.13-6.248c.193-.209.373-.429.54-.66l.13-.154Z"/>
+                </g>
+              </svg>
+            Vasile Gherghel 81, București 
+            </h2>
+            <div class="link-container">
+                <a href="/">anunturi</a>
+                <a href="/about">despre noi</a>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button id="pause-button"></button>
+        </div>
+    </div>
+
+<style>
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 76, 79, 0.75);
+}
+
+video {
+    display: none;
+  }
+
+.hero-section{
+    display: block;
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    background: url(/cover_image.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+.hero-section__content{
+    width: 80%;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-section__content h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-white);
+    line-height: 1.3;
+}
+
+.hero-section__content h2{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.hero-section__content h2 svg{
+    width: 2rem;
+    /* color: #dc2626; */
+}
+
+.link-container{
+    margin-top: 2rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.link-container a{
+    color: black;
+    text-decoration: underline;
+    color: var(--color-white);
+    font-size: 1.3rem;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 70vh;
+  }
+}
+
+@media (min-width: 1105px) {
+    video{
+        display: block;
+    }
+
+    .hero-section{
+        background: transparent;
+    }
+
+    .link-container{
+        display: flex;
+    }
+
+    .btn-container{
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+}
+
+.btn-container button{
+    background-color: transparent;
+    border: none;
+    text-transform: lowercase;
+    cursor: pointer;
+    fill: var(--color-white);
+    width: 1rem;
+}
+}
+</style>
+
+<script >
+    // Get the video
+    const video = document.getElementById("cover-video") as HTMLVideoElement;
+    const btn = document.getElementById("pause-button") as HTMLButtonElement;
+
+    function controlVideo() {
+        if (video.paused) {
+            video.play();  
+            btn.innerHTML = `<svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 10 16">
+    <path fill-rule="evenodd" d="M0 .8C0 .358.32 0 .714 0h1.429c.394 0 .714.358.714.8v14.4c0 .442-.32.8-.714.8H.714a.678.678 0 0 1-.505-.234A.851.851 0 0 1 0 15.2V.8Zm7.143 0c0-.442.32-.8.714-.8h1.429c.19 0 .37.084.505.234.134.15.209.354.209.566v14.4c0 .442-.32.8-.714.8H7.857c-.394 0-.714-.358-.714-.8V.8Z" clip-rule="evenodd"/>
+  </svg>`;
+        } else {
+            video?.pause();
+            btn.innerHTML = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 14 16">
+    <path d="M0 .984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L1.506.139A1 1 0 0 0 0 .984Z"/>
+  </svg>`;
+          
+          }
+    }
+    controlVideo();
+    btn.addEventListener('click', controlVideo);
+</script>

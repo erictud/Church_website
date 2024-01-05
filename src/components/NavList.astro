@@ -1,5 +1,6 @@
 ---
 import NavLink from "./NavLink.astro";
+const {currentPage} = Astro.props;
 ---
 
 <style>
@@ -11,7 +12,7 @@ import NavLink from "./NavLink.astro";
     }
 </style>
 <div class="container">
-    <NavLink href="/">acasa</NavLink>
-    <NavLink href="/about">despre noi</NavLink>
-    <NavLink href="/anouncements">anunturi</NavLink>
+    <NavLink currentPage={currentPage} href="/">acasa</NavLink>
+    <NavLink currentPage={currentPage} href="/about">despre noi</NavLink>
+    <NavLink currentPage={currentPage} href="/anouncements">anunturi</NavLink>
 </div>

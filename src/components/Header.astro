@@ -1,5 +1,7 @@
 ---
 import NavList from "./NavList.astro";
+
+const {absolute} = Astro.props;
 ---
 
     <style>
@@ -9,6 +11,13 @@ import NavList from "./NavList.astro";
             display: flex;
 		    align-items: center;
 		    justify-content: space-between;
+            z-index: 150;
+            background-color: rgba(255, 255, 255, .8);
+        }
+        
+        .absolute{
+            position: absolute;
+            top: 0;
         }
 
         .logo-box{
@@ -33,7 +42,7 @@ import NavList from "./NavList.astro";
         }
 
     </style>
-<header>
+<header class:list={{absolute: absolute}}>
     <!-- Logo box -->
     <div class="logo-box">
         <img alt="Logo-ul bisericii adventiste" src="/logo.webp" class="logo-box__img"/>

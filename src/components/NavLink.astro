@@ -4,9 +4,11 @@ const {href, class: className, props} = Astro.props;
 const {pathname} = Astro.url;
 
 const isActive =  href === pathname; 
+const {currentPage} = Astro.props;
+
 ---
 
-<a href={href} class:list={[className, {active: isActive}]} {...props}>
+<a href={href} class:list={[className, {active: isActive && currentPage}]} {...props}>
     <slot />
 </a>
 <style>
