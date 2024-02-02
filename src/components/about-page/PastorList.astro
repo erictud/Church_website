@@ -1,0 +1,46 @@
+<section class="pastor-list">
+    <h2>Lista pastori</h2>
+    <ul>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+        <li>Pastor Pastor</li>
+    </ul>
+</section>
+<style>
+    .pastor-list{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem .5rem;
+    }
+
+    .pastor-list h2{
+        font-size: 2rem;
+        color: var(--color-primary-700);
+        text-transform: lowercase;
+        font-style: italic;
+        padding-bottom: 1rem;
+    }
+
+    ul{
+        padding-left: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .3rem;
+    }
+
+    @media (min-width: 500px){
+        ul{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    ul li{
+        font-size: 1.5rem;
+    }
+</style>

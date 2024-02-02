@@ -1,0 +1,22 @@
+---
+import ImageSlider from "./ImageSlider";
+---
+
+<section class="image-gallery-section">
+      <h2>Galerie foto</h2>
+      <ImageSlider client:load/>
+</section>
+
+<style>
+    .image-gallery-section{
+        padding: 1rem .5rem;
+    }
+
+    .image-gallery-section h2{
+        font-size: 2rem;
+        color: var(--color-primary-700);
+        text-transform: lowercase;
+        font-style: italic;
+        padding-bottom: 1rem;
+    }
+</style>

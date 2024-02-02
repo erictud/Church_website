@@ -1,10 +1,18 @@
 ---
 import GeneralLayout from "../layouts/GeneralLayout.astro";
 import HeroSection from '../components/about-page/HeroSection.astro';
+import Statistics from '../components/about-page/Statistics.astro';
 import '../styles/global.css';
+import HIstorySection from "../components/about-page/HIstorySection.astro";
+import PastorList from '../components/about-page/PastorList.astro';
+import ImageGallery from "../components/about-page/ImageGallery.astro";
 
 ---
 
 <GeneralLayout title="Despre noi">
     <HeroSection />
+    <Statistics/>
+    <HIstorySection />
+    <PastorList />
+    <ImageGallery />
 </GeneralLayout>

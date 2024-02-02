@@ -1,0 +1,73 @@
+<section class="history-section">
+    <h2>Istoria bisericii Marantha</h2>
+    <div class="history-section_content">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ad veniam exercitationem praesentium. Assumenda officia aut pariatur voluptas repellendus perferendis tempora aliquam blanditiis. Veniam, dolore nisi praesentium obcaecati quia tempore, velit doloribus incidunt, facilis ducimus omnis nostrum! Id consequatur accusantium mollitia quis officia fuga doloremque iusto consequuntur dolorem asperiores nobis maiores eaque, deleniti dolor tenetur adipisci quisquam eligendi facilis, eos autem voluptatum? Molestiae cumque officiis minus, libero aut beatae fuga velit dolorum minima facilis, maxime temporibus exercitationem illum esse architecto. Modi sint veniam fuga, dolore sunt autem quia nemo nesciunt illum, fugiat, voluptatem quidem vitae est maxime odio et laboriosam!
+        </p>
+        <div class="image-row">
+            <div class="image-column">
+                <img src="/banner.jpeg" alt="Poza">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-column">
+                <img src="/banner.jpeg" alt="Poza">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="image-column">
+                <img src="/banner.jpeg" alt="Poza">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad et quam temporibus, repudiandae aliquam vero eaque facere laborum harum fugiat consectetur vitae quasi optio voluptatibus earum tempore ut id illum quod culpa. Fugit eaque facere placeat consequatur ipsa ipsam iste aperiam assumenda soluta perferendis debitis, doloribus odit, dolores blanditiis non nam? Placeat eos error voluptatem dolore non dolores nostrum? Impedit ab laboriosam veniam eum consectetur quaerat similique accusantium voluptate cum at officiis recusandae ex error sapiente eos quod fugit, possimus ullam porro tenetur, ducimus dolores? Dolores eaque vel modi in quis totam maiores voluptate inventore, architecto, sunt voluptates, reprehenderit laborum.</p>
+    </div>
+</section>
+
+<style>
+    .history-section{
+        padding: 1rem .5rem;
+    }
+
+    .history-section h2{
+        font-size: 2rem;
+        color: var(--color-primary-700);
+        text-transform: lowercase;
+        font-style: italic;
+        padding-bottom: 1rem;
+    }
+
+    .history-section_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-row{
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-column{
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+    }
+
+    @media (min-width: 768px) {
+        .image-row{
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    .image-column img{
+        width: 15rem;
+    }
+
+    .image-column p{
+        font-size: .9rem;
+        color: rgb(80, 80, 80);
+    }
+</style>
